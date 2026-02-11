@@ -36,20 +36,23 @@ h1 {
 /* h2 con el mismo estilo que correo */
 h2 {
     background: #f1f9ff;
-    padding: 6px 18px;        /* un poco más de padding por ser texto más grande */
+    padding: 6px 18px;
     border-radius: 40px;
     border: 1px solid #b8d8e8;
     font-style: normal;
     font-size: 1.3rem;
     font-weight: 600;
     color: #0f4c5c;
-    display: inline-block;    /* para que el fondo se ajuste al contenido */
+    display: inline-block;
     margin-bottom: 25px;
 }
 
-/* Si el h2 contiene un span, hereda el color */
+/* El span dentro del h2 con el mismo estilo que el enlace al correo */
 h2 span {
-    color: inherit;
+    color: #0f4c5c;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px dotted #3f7b8a;
 }
 
 p {
@@ -62,7 +65,7 @@ p {
     flex-wrap: wrap;
 }
 
-/* Etiqueta correo (estilo simple) */
+/* Etiqueta correo */
 correo {
     background: #f1f9ff;
     padding: 4px 14px;
