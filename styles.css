@@ -47,8 +47,19 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* El span dentro del h2 con el mismo estilo que el enlace al correo */
-h2 span {
+/* La palabra "alumno" con el mismo estilo que "Correo electrónico:" */
+h2 .alumno-label {
+    color: #2b3a4a;        /* mismo color que el texto de los párrafos */
+    font-size: 1.1rem;     /* mismo tamaño que los párrafos */
+    font-weight: 400;      /* peso normal (sin negrita) */
+    border-bottom: none;   /* sin subrayado */
+    background: transparent;
+    padding: 0;
+    display: inline;       /* para que no herede paddings de h2 */
+}
+
+/* El nombre del alumno con el mismo estilo que el enlace del correo */
+h2 .nombre-alumno {
     color: #0f4c5c;
     font-weight: 600;
     text-decoration: none;
