@@ -33,13 +33,23 @@ h1 {
     padding-left: 16px;
 }
 
+/* h2 con el mismo estilo que correo */
 h2 {
+    background: #f1f9ff;
+    padding: 6px 18px;        /* un poco más de padding por ser texto más grande */
+    border-radius: 40px;
+    border: 1px solid #b8d8e8;
+    font-style: normal;
     font-size: 1.3rem;
-    color: #2f3e46;
-    font-weight: 500;
+    font-weight: 600;
+    color: #0f4c5c;
+    display: inline-block;    /* para que el fondo se ajuste al contenido */
     margin-bottom: 25px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #cad2d9;
+}
+
+/* Si el h2 contiene un span, hereda el color */
+h2 span {
+    color: inherit;
 }
 
 p {
