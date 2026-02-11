@@ -1,0 +1,214 @@
+/* Reset y tipografía base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(145deg, #f0f4fa 0%, #d9e2ef 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+/* Tarjeta principal */
+.card {
+    max-width: 720px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 20px 35px -8px rgba(0, 20, 45, 0.2);
+    padding: 2.5rem 2.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+/* Cabeceras */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0a2a44;
+    letter-spacing: -0.02em;
+    border-bottom: 4px solid #327ab5;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.6rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #1d4668;
+    margin-bottom: 1.2rem;
+    background: #e3ecf5;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 40px;
+    font-weight: 600;
+    border: 1px solid #b8d1e0;
+}
+
+/* párrafos con espaciado elegante */
+p {
+    margin: 1.2rem 0;
+    color: #1f3a57;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Etiqueta semántica "correo" — la usamos como distintivo */
+correo {
+    display: inline-flex;
+    background: #edf4fc;
+    border-radius: 24px;
+    padding: 0.15rem 0.9rem;
+    border: 1px dashed #327ab5;
+    font-style: normal;
+    transition: background 0.2s;
+}
+
+correo:hover {
+    background: #d9e9ff;
+}
+
+/* Todos los enlaces con estilo amigable */
+a {
+    color: #1e5b8a;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.2rem 0.4rem;
+    border-radius: 12px;
+    transition: all 0.15s ease;
+    border-bottom: 2px solid transparent;
+}
+
+a:hover {
+    color: #0a2e4a;
+    background: #e1edfb;
+    border-bottom: 2px solid #0a2e4a;
+}
+
+/* Enlace de correo con estilo específico (mailto) */
+a[href^="mailto:"] {
+    background: #eef5ff;
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+    border: 1px solid #a0c1d9;
+    font-weight: 500;
+}
+
+a[href^="mailto:"]:hover {
+    background: #cfe1f2;
+    border-color: #1e5b8a;
+}
+
+/* El enlace del subdominio — destacado */
+p:nth-of-type(2) a {
+    background: #0a2a44;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    font-size: 1.05rem;
+    letter-spacing: 0.3px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(10, 42, 68, 0.2);
+}
+
+p:nth-of-type(2) a:hover {
+    background: #144a70;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 14px rgba(10, 42, 68, 0.3);
+    border-bottom: none;
+}
+
+/* Enlace de Free DNS */
+p:last-of-type a {
+    font-size: 1.2rem;
+    background: #4a7c59;
+    color: white;
+    padding: 0.6rem 1.8rem;
+    border-radius: 60px;
+    border: none;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 6px 0 #2b4a35;
+    transition: 0.05s linear;
+}
+
+p:last-of-type a:hover {
+    background: #5e9c6e;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #2b4a35;
+    border-bottom: none;
+}
+
+/* ajuste para el último párrafo (Free DNS) */
+p:last-of-type {
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+    body { padding: 1rem; }
+    .card { padding: 1.8rem; }
+    h1 { font-size: 1.7rem; }
+}
+
+/* micro detalle: ícono sutil al lado de enlaces externos? (opcional) */
+a[href^="https://"]::after {
+    content: " ↗";
+    font-size: 0.9em;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* pero no lo queremos en el mailto */
+a[href^="mailto:"]::after {
+    content: "";
+}
+
+/* para que el correo dentro de <correo> no tenga doble subrayado */
+correo a {
+    border-bottom: none;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font-weight: 600;
+}
+correo a:hover {
+    background: transparent;
+    border-bottom: none;
+    color: #0a2e4a;
+}
+
+/* Nombre del alumno también con más presencia */
+h2 span {
+    font-weight: 800;
+    color: #0f3a5c;
+}
+
+/* pequeña separación */
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #b0c8dd, transparent);
+    margin: 1.8rem 0 1rem 0;
+}
