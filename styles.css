@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #eef2f5;
+    background: #e0e7ef;        /* ligeramente más oscuro, mayor contraste */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,70 +16,59 @@ body {
 }
 
 .card {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    max-width: 550px;
+    background: #ffffff;        /* blanco puro, destaca sobre el fondo */
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    max-width: 700px;           /* más grande */
     width: 100%;
-    padding: 30px 35px;
-    border: 1px solid #dde7ed;
+    padding: 35px 45px;        /* más espacio interior */
+    border: 1px solid #d0dce5;
 }
 
 h1 {
-    font-size: 1.9rem;
+    font-size: 2.1rem;         /* ligeramente más grande */
     color: #1d3557;
     margin-bottom: 0.6rem;
     border-left: 6px solid #457b9d;
-    padding-left: 16px;
+    padding-left: 18px;
 }
 
-/* h2 con el mismo estilo que correo */
+/* h2 con borde inferior — estilo limpio y acorde al diseño */
 h2 {
-    background: #f1f9ff;
-    padding: 6px 18px;
-    border-radius: 40px;
-    border: 1px solid #b8d8e8;
-    font-style: normal;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #0f4c5c;
-    display: inline-block;
-    margin-bottom: 25px;
-}
-
-/* La palabra "alumno" con el mismo estilo que "Correo electrónico:" */
-h2 .alumno-label {
-    color: #2b3a4a;        /* mismo color que el texto de los párrafos */
-    font-size: 1.1rem;     /* mismo tamaño que los párrafos */
-    font-weight: 400;      /* peso normal (sin negrita) */
-    border-bottom: none;   /* sin subrayado */
     background: transparent;
-    padding: 0;
-    display: inline;       /* para que no herede paddings de h2 */
-}
-
-/* El nombre del alumno con el mismo estilo que el enlace del correo */
-h2 .nombre-alumno {
-    color: #0f4c5c;
+    border: none;
+    border-bottom: 3px solid #457b9d;
+    padding: 0 0 8px 0;
+    border-radius: 0;
+    font-size: 1.5rem;         /* ligeramente más grande */
     font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px dotted #3f7b8a;
+    color: #1d3557;
+    display: inline-block;
+    margin-bottom: 28px;
 }
 
 p {
-    font-size: 1.1rem;
-    margin: 18px 0;
+    font-size: 1.2rem;         /* más legible en card grande */
+    margin: 20px 0;
     color: #2b3a4a;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
+}
+
+/* El nombre del alumno con el mismo estilo que el enlace de correo */
+p:first-of-type span {
+    color: #0f4c5c;
+    font-weight: 600;
+    border-bottom: 1px dotted #3f7b8a;
+    text-decoration: none;
 }
 
 /* Etiqueta correo */
 correo {
     background: #f1f9ff;
-    padding: 4px 14px;
+    padding: 5px 16px;
     border-radius: 30px;
     border: 1px solid #b8d8e8;
     font-style: normal;
@@ -105,9 +94,9 @@ p:last-child a {
     color: white;
     font-weight: 600;
     text-decoration: none;
-    padding: 10px 28px;
+    padding: 12px 32px;        /* ligeramente más grande */
     border-radius: 40px;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     transition: background 0.1s;
     border: none;
     margin-left: 5px;
@@ -120,7 +109,7 @@ p:last-child a:hover {
 /* El último párrafo centrado */
 p:last-child {
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 /* Línea decorativa */
@@ -128,15 +117,21 @@ hr {
     border: 0;
     height: 1px;
     background: linear-gradient(to right, #d9e2e9, #a0b9c6, #d9e2e9);
-    margin: 25px 0 15px 0;
+    margin: 30px 0 20px 0;
 }
 
 /* Ajuste responsive */
-@media (max-width: 450px) {
+@media (max-width: 600px) {
     .card {
-        padding: 20px;
+        padding: 25px 30px;
     }
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 1.1rem;
     }
 }
